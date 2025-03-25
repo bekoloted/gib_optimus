@@ -1,0 +1,62 @@
+# 🩸 Gib Optimus - Plateforme de Gestion des Donneurs de Sang
+
+![Bannière du projet](https://via.placeholder.com/1200x400?text=Gib+Optimus+-+Donnez+du+sens+à+votre+don)
+
+## 📌 Table des Matières
+- [Objectif](#-objectif)
+- [Fonctionnalités](#-fonctionnalités)
+- [Technologies](#-technologies)
+- [Installation](#-installation)
+- [Utilisation](#-utilisation)
+- [Structure du Projet](#-structure-du-projet)
+- [Contribuer](#-contribuer)
+- [Licence](#-licence)
+
+## 🎯 Objectif
+Gib Optimus est une plateforme complète pour :
+- **Optimiser** la collecte de sang
+- **Cartographier** les donneurs par localisation
+- **Analyser** les données démographiques et médicales
+- **Prédire** l'éligibilité des potentiels donneurs
+
+## ✨ Fonctionnalités
+### Tableau de Bord Interactif
+- 🌍 Cartographie géolocalisée des donneurs
+- 📊 Visualisations dynamiques (Plotly/Seaborn)
+- 🔍 Filtres multicritères (âge, localisation, éligibilité)
+
+### Gestion des Données
+- 📤 Import de fichiers (CSV/Excel)
+- 🧹 Nettoyage automatique des données
+- 🛠️ Éditeur de données intégré
+
+### Modules Spécialisés
+- 🏥 Suivi des paramètres de santé
+- 📈 Analyse des campagnes de collecte
+- 🤖 Modèle d'éligibilité IA
+
+## 💻 Technologies
+| Composant       | Technologies                          |
+|-----------------|---------------------------------------|
+| Backend         | Python 3.10, SQLAlchemy 2.0, Pandas  |
+| Frontend        | Streamlit, Plotly, Leaflet           |
+| Base de Données | SQLite (production), PostgreSQL (dev)|
+| Géospatial      | GeoPandas, Shapely                   |
+| ML              | Scikit-learn (futur)                 |
+
+## 🚀 Installation
+### Prérequis
+- Python 3.10+
+- Pipenv (recommandé)
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/votre-repo/gib-optimus.git
+cd gib-optimus
+
+# 2. Configurer l'environnement
+pipenv install --dev
+pipenv shell
+
+# 3. Initialiser la base de données
+python -m src.database.init_db

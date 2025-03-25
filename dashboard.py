@@ -1,12 +1,11 @@
 # Stephan doit me donner l'api à utiliser pour la Prédiction d'Éligibilité IA
-# Ne pas oublié de donner ce codes à ChatGPT pour l'ajout des commentaires
+# Ne pas oublié de donner ce codes à ChatGPT pour l'ajout des commentaires et pour bien renommer mes variables
 # S'il y'a le temps on doit Dockeriser cet app
 # A la fin du projet faut que je teste si 
 # Penser à améliorer la orm_models.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import geopandas as gpd
 from src.data_cleaner import clean_location_data
 from src.database import init_db
@@ -17,7 +16,7 @@ import json
 from shapely.geometry import shape
 
 def generate_geodata():
-    """Génère des données géospatiales fictives pour Douala"""
+    """Données géospatiales fictives pour Douala"""
     arrondissements = {
         "Douala 1": {"coordinates": [[9.68, 4.04], [9.72, 4.04], [9.72, 4.07], [9.68, 4.07]]},
         "Douala 2": {"coordinates": [[9.72, 4.04], [9.76, 4.04], [9.76, 4.07], [9.72, 4.07]]},
@@ -113,22 +112,23 @@ def show_cartography():
     gdf['donors_count'] = gdf['donors_count'].fillna(0)
     
     # Création de la carte
-    fig = go.Choroplethmap(
+    fig = px.choropleth_mapbox(
         gdf,
         geojson=gdf.geometry,
         locations=gdf.index,
         color='donors_count',
-        hoverinfo='name',
-        hovertext={'donors_count': True},
-        colorscale="Viridis",
-        z=10,
-        c={"lat": 4.0511, "lon": 9.7679},
+        hover_name='name',
+        hover_data={'donors_count': True},
+        color_continuous_scale="Viridis",
+        mapbox_style="carto-positron",
+        zoom=12,
+        center={"lat": 4.0511, "lon": 9.7679},
         opacity=0.7,
         labels={'donors_count': 'Nombre de donneurs'}
     )
     st.plotly_chart(fig, use_container_width=True)
     
-    # Visualisations complémentaires
+    # Autres visualisations
     col1, col2 = st.columns(2)
     
     with col1:
