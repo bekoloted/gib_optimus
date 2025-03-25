@@ -50,7 +50,7 @@ Gib Optimus est une plateforme pour :
 - Python 3.10+
 
 # 1. Cloner le dépôt
-git clone https://github.com/votre-repo/gib-optimus.git
+git clone https://github.com/bekoloted/gib_optimus.git
 cd gib-optimus
 
 2. Création de l'environnement virtuel
