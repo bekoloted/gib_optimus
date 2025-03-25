@@ -1,48 +1,49 @@
 # 🩸 Gib Optimus - Plateforme de Gestion des Donneurs de Sang
 
-![Bannière du projet](https://via.placeholder.com/1200x400?text=Gib+Optimus+-+Donnez+du+sens+à+votre+don)
+|--------------------------------------------------------|
+                        Objectif
+|--------------------------------------------------------|
+Gib Optimus est une plateforme pour :
+- Optimiser la collecte de sang
+- Cartographier les donneurs par localisation
+- Analyser les données démographiques et médicales
+- Prédire l'éligibilité des potentiels donneurs
 
-## 📌 Table des Matières
-- [Objectif](#-objectif)
-- [Fonctionnalités](#-fonctionnalités)
-- [Technologies](#-technologies)
-- [Installation](#-installation)
-- [Utilisation](#-utilisation)
-- [Structure du Projet](#-structure-du-projet)
-- [Contribuer](#-contribuer)
-- [Licence](#-licence)
-
-## 🎯 Objectif
-Gib Optimus est une plateforme complète pour :
-- **Optimiser** la collecte de sang
-- **Cartographier** les donneurs par localisation
-- **Analyser** les données démographiques et médicales
-- **Prédire** l'éligibilité des potentiels donneurs
-
-## ✨ Fonctionnalités
-### Tableau de Bord Interactif
+|--------------------------------------------------------|
+              Tableau de Bord Interactif
+|--------------------------------------------------------|
 - 🌍 Cartographie géolocalisée des donneurs
 - 📊 Visualisations dynamiques (Plotly/Seaborn)
 - 🔍 Filtres multicritères (âge, localisation, éligibilité)
 
-### Gestion des Données
+|--------------------------------------------------------|
+                  Gestion des Données
+|--------------------------------------------------------|
 - 📤 Import de fichiers (CSV/Excel)
 - 🧹 Nettoyage automatique des données
 - 🛠️ Éditeur de données intégré
 
-### Modules Spécialisés
+|--------------------------------------------------------|
+                  Modules Spécialisés
+|--------------------------------------------------------|
 - 🏥 Suivi des paramètres de santé
 - 📈 Analyse des campagnes de collecte
 - 🤖 Modèle d'éligibilité IA
 
-## 💻 Technologies
-| Composant       | Technologies                          |
-|-----------------|---------------------------------------|
+### Technologies
+|-----------------|--------------------------------------|
+| Composant       | Technologies                         |
+|-----------------|--------------------------------------|
 | Backend         | Python 3.10, SQLAlchemy 2.0, Pandas  |
+|-----------------|--------------------------------------|
 | Frontend        | Streamlit, Plotly, Leaflet           |
+|-----------------|--------------------------------------|
 | Base de Données | SQLite (production), PostgreSQL (dev)|
+|-----------------|--------------------------------------|
 | Géospatial      | GeoPandas, Shapely                   |
+|-----------------|--------------------------------------|
 | ML              | Scikit-learn (futur)                 |
+|-----------------|--------------------------------------|
 
 ## 🚀 Installation
 ### Prérequis
@@ -54,9 +55,17 @@ Gib Optimus est une plateforme complète pour :
 git clone https://github.com/votre-repo/gib-optimus.git
 cd gib-optimus
 
-# 2. Configurer l'environnement
-pipenv install --dev
-pipenv shell
+2. Création de l'environnement virtuel
+# Windows (CMD/PowerShell)
+python -m venv venv
+venv\Scripts\activate
 
-# 3. Initialiser la base de données
-python -m src.database.init_db
+# MacOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+3. Installation des dépendances
+# Tous systèmes (depuis la racine du projet)
+pip install -r requirements.txt
+
+Ce travail a été fait dans le but de presenter une solution utile lors du hackathon organisé par INDABA
