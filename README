@@ -7,7 +7,7 @@ Gib Optimus est une plateforme pour :
 - Optimiser la collecte de sang
 - Cartographier les donneurs par localisation
 - Analyser les données démographiques et médicales
-- Prédire l'éligibilité des potentiels donneurs
+- Prédire l'éligibilité des potentiels donneurs (Fonctionalité non terminéz)
 
 |--------------------------------------------------------|
               Tableau de Bord Interactif
@@ -42,7 +42,7 @@ Gib Optimus est une plateforme pour :
 |-----------------|--------------------------------------|
 | Géospatial      | GeoPandas, Shapely                   |
 |-----------------|--------------------------------------|
-| ML              | Scikit-learn (futur)                 |
+| ML              | Scikit-learn                         |
 |-----------------|--------------------------------------|
 
 ## 🚀 Installation
