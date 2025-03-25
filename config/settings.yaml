@@ -1,0 +1,12 @@
+database:
+  uri: "sqlite:///data/blood_donors.db"
+  
+missing_values_defaults:
+  numerical: -1
+  categorical: "Unknown"
+  
+dtype_conversions:
+  age: int
+  height: float
+  weight: float
+  timestamp: datetime64[ns]
