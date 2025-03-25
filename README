@@ -48,9 +48,7 @@ Gib Optimus est une plateforme pour :
 ## 🚀 Installation
 ### Prérequis
 - Python 3.10+
-- Pipenv (recommandé)
 
-```bash
 # 1. Cloner le dépôt
 git clone https://github.com/votre-repo/gib-optimus.git
 cd gib-optimus
