@@ -66,4 +66,7 @@ source venv/bin/activate
 # Tous systèmes (depuis la racine du projet)
 pip install -r requirements.txt
 
+4. Execution
+streamlit run dashboard.py
+
 Ce travail a été fait dans le but de presenter une solution utile lors du hackathon organisé par INDABA
